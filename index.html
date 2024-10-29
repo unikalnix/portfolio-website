@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="navbar" id="navbar">
+      <h1 id="logo">Logo</h1>
+      <i id="menu" class="fa fa-bars"></i>
+      <button class="nav-btn">
+        Hire me <i class="fa fa-external-link" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <ul>
+        <li id="nav-links">
+          <a onclick="(e) => e.preventDefault();" href="#home">Home</a>
+        </li>
+        <li id="nav-links">
+          <a onclick="(e) => e.preventDefault();" href="#about">About</a>
+        </li>
+        <li id="nav-links">
+          <a onclick="(e) => e.preventDefault();" href="#projects">Projects</a>
+        </li>
+        <li id="nav-links">
+          <a onclick="(e) => e.preventDefault();" href="#skills">Skills</a>
+        </li>
+        <li id="nav-links">
+          <a onclick="(e) => e.preventDefault();" href="#blog">Blog</a>
+        </li>
+        <li id="nav-links">
+          <a onclick="(e) => e.preventDefault();" href="#contact">Contact</a>
+        </li>
+        <li id="nav-links">
+          <a onclick="(e) => e.preventDefault();" href="#social"
+            >Social Profiles</a
+          >
+        </li>
+      </ul>
+    </div>
+    <section class="right" id="right">
+      <div class="home" id="home">
+        <section>
+          <div class="home-left">
+            <h2>Hi, I'm Daniyal Shakeel</h2>
+            <h3>I am</h3>
+            <h3 class="home-autotype-effect"></h3>
+
+            <div class="buttons-container">
+              <button class="btn">Hire me!</button>
+              <button class="btn">
+                Resume <i class="fa fa-download" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="home-right">
+            <div class="loader">
+              <div class="loader_cube loader_cube--color"></div>
+              <div class="loader_cube loader_cube--glowing">
+                <div class="image-container">
+                  <img
+                    draggable="false"
+                    src="WhatsApp Image 2024-09-07 at 13.31.04_3991dbac.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <hr style="background-color: lightseagreen; border: none; width: 90%; margin: auto; height: 2px; margin: 30px;"/>
+      <div class="about background" id="about">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <h1 id="about-dropdown">Who we are?</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi enim aut ab quidem, tempora laudantium debitis quos eligendi tenetur et.</p>
+        <h3>50+ Happy clients</h3>
+      </div>
+      <hr style="background-color: lightseagreen; border: none; width: 90%; margin: auto; height: 2px; margin: 30px;"/>
+      <div class="projects" id="projects">I am Projects</div>
+      <div class="skills" id="skills">I am skills</div>
+      <div class="blog" id="blog">I am blog</div>
+      <div class="contact" id="contact">I am contact</div>
+      <div class="social" id="social">I am social</div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
