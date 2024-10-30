@@ -712,6 +712,10 @@ hr {
     height: 75%;
   }
 
+  .project h1{
+    font-size: 40px;
+  }
+
   .project:hover{
     background-size: 250px;
     min-width: 90%;
