@@ -202,7 +202,8 @@ hr {
   top: var(--sidebarTop);
   width: var(--sidebarWidth);
   height: 100vh;
-  background-color: var(--background-color);
+  background-color: transparent;
+    backdrop-filter: blur(50px);
   border-right: 1px solid var(--border-color);
 }
 
@@ -546,74 +547,54 @@ hr {
   box-shadow: 6vmin 0 1.1044391406215353vmin currentColor;
 }
 
-/* projects */
-.projects {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  width: 100%;
+.projects{
+  height: 100vh;
+  padding: 20px 0;
+}
+
+.projects-container{
   height: 100%;
-}
-
-.projects-container {
+  width: 90%;
+  margin: auto;
   display: flex;
-  position: relative; /* For positioning children */
+  align-items: center;
+  justify-content: start;
   gap: 20px;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
-.project {
-  width: 100px; /* Initial width */
-  height: 400px;
+.projects-container::-webkit-scrollbar{
+  display: none;
+}
+
+.project{
+  min-width: 25%;
+  height: 100%;
+  background-color:#20b2aa;
+  transition: 0.5s;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #20b2aa;
-  position: relative; /* Position relative to manage child elements */
-  overflow: hidden; /* Hide overflow for a clean transition */
-  cursor: pointer; /* Pointer cursor on hover */
-  color: white; /* Text color */
-  transition: width 0.5s ease; /* Smooth transition for width */
-}
-
-.project:hover {
-  width: 400px; /* Expanded width on hover */
-}
-
-.project::after {
-  content: ''; /* Default text */
-  position: absolute;
-  top: 0;
-  left: 100%; /* Position it to the right of the project */
-  width: 300px; /* Width of the text area */
-  height: 400px;
-  color: white; /* Text color */
-  display: flex; /* Center text */
-  align-items: center; /* Center text vertically */
-  justify-content: center; /* Center text horizontally */
-  transition: transform 0.5s ease; /* Smooth transition for the background */
-}
-
-.project:hover::after {
-  content: ''; /* Change text on hover */
-  transform: translateX(-100%); /* Slide in from the right */
-  background-image: url('WhatsApp Image 2024-09-07 at 13.31.04_3991dbac.jpg'); /* Background image on hover */
-  background-size: cover; /* Cover the entire area */
-  background-position: center; /* Center the image */
-}
-
-/* Ensure transition occurs smoothly when mouse leaves */
-.project::after {
-  transform: translateX(0); /* Keep initial state */
 }
 
 .project h1{
-  transform: rotate(-90deg);
-  width: 100%;
+  transform: rotate(270deg);
   font-size: 54px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: white;
+}
+
+.project:hover{
+  min-width: 75%;
+  background: url('WhatsApp Image 2024-09-07 at 13.31.04_3991dbac.jpg');
+  background-position-x: left;
+  background-position-y: top;
+  background-size: 400px;
+  background-color: transparent;
+}
+
+.project:hover h1{
+  display: none;
 }
 
 .skills {
@@ -649,9 +630,10 @@ hr {
     z-index: 1000;
     /* Ensure it overlays on top */
   }
-
+  
   .sidebar.open {
     transform: translateY(0);
+    
     /* Show the sidebar when open */
   }
 
@@ -725,7 +707,4 @@ hr {
     font-size: 14px;
   }
 
-  .projects-container{
-    flex-direction: column;
-  }
 }

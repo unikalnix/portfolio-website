@@ -100,13 +100,6 @@ const menuOpenHandler = () => {
   navbarMenu.addEventListener("click", () => {
     sidebar.classList.toggle("open"); // Toggle the 'open' class
   });
-
-  // Close the sidebar when a link is clicked
-  navLinks.forEach((navLink) => {
-    navLink.addEventListener("click", () => {
-      sidebar.classList.remove("open"); // Close sidebar on link click
-    });
-  });
 };
 
 window.addEventListener("DOMContentLoaded", () => {
