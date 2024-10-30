@@ -112,7 +112,7 @@ const menuOpenHandler = () => {
 window.addEventListener("DOMContentLoaded", () => {
   Array.from(navLinks)[0].classList.add("active");
   whoWeAreDropDownIcon.style.transform = "rotate(-90deg)";
-  scrollToTop();
+  // scrollToTop();
   navLinksScrollHandler();
   skillAutoWriter(); 
   aboutDropDown();

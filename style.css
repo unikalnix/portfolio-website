@@ -724,4 +724,8 @@ hr {
     padding: 0.8em 0.75em;
     font-size: 14px;
   }
+
+  .projects-container{
+    flex-direction: column;
+  }
 }
