@@ -584,8 +584,20 @@ hr {
   color: white;
 }
 
+/* Small phone sizes */
 .projectHover{
-  min-width: 75%;
+  min-width: 60%;
+  background: url('WhatsApp Image 2024-09-07 at 13.31.04_3991dbac.jpg');
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: top;
+  background-size: 400px;
+  background-color: transparent;
+}
+
+/* Large screen */
+.project:hover{
+  min-width: 40%;
   background: url('WhatsApp Image 2024-09-07 at 13.31.04_3991dbac.jpg');
   background-repeat: no-repeat;
   background-position-x: left;
@@ -718,7 +730,7 @@ hr {
 
   .project:hover{
     background-size: 250px;
-    min-width: 90%;
+    min-width: 60%;
   }
 
 }
