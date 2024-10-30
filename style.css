@@ -708,4 +708,8 @@ hr {
     font-size: 14px;
   }
 
+  .project:hover{
+    background-size: 250px;
+  }
+
 }
