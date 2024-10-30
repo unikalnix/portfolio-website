@@ -75,8 +75,8 @@ const aboutDropDown = () => {
   aboutDropDown.classList.add("dropdown");
   aboutDropDown.addEventListener("mouseover", () => {
     document.querySelector(".dropdown-container").style.display = "block";
-    whoWeAreDropDownIcon.style.transform = 'rotate(0deg)';
-    whoWeAreDropDownIcon.style.transition = '0.3s'
+    whoWeAreDropDownIcon.style.transform = "rotate(0deg)";
+    whoWeAreDropDownIcon.style.transition = "0.3s";
   });
   aboutDropDown.addEventListener("mouseout", () => {
     document.querySelector(".dropdown-container").style.display = "none";
@@ -106,8 +106,41 @@ window.addEventListener("DOMContentLoaded", () => {
   Array.from(navLinks)[0].classList.add("active");
   whoWeAreDropDownIcon.style.transform = "rotate(-90deg)";
   // scrollToTop();
+  if(window.innerWidth < 768){
+    hoverClick();
+  }
   navLinksScrollHandler();
-  skillAutoWriter(); 
+  skillAutoWriter();
   aboutDropDown();
   menuOpenHandler();
 });
+
+const hoverClick = () =>{
+  
+document.querySelectorAll(".project").forEach((item) => {
+  // Track hover state
+  let isHovered = false;
+
+  item.addEventListener("click", (e) => {
+    // Check if item is already in 'hover' state
+    if (!isHovered) {
+      // Show hover effect
+      item.classList.add("projectHover"); // Assuming 'hover-effect' is the class that styles hover
+      isHovered = true;
+    } else {
+      // Trigger action after second click
+      console.log("Action performed");
+      window.location.href = 'index.html'
+      item.classList.remove("projectHover"); // Optional: Remove hover effect after action
+      isHovered = false;
+    }
+  });
+
+  // Optional: Reset on mouseleave (if needed)
+  item.addEventListener("mouseleave", () => {
+    item.classList.remove("projectHover");
+    isHovered = false;
+  });
+});
+
+}
