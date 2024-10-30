@@ -587,6 +587,7 @@ hr {
 .project:hover{
   min-width: 75%;
   background: url('WhatsApp Image 2024-09-07 at 13.31.04_3991dbac.jpg');
+  background-repeat: no-repeat;
   background-position-x: left;
   background-position-y: top;
   background-size: 400px;
