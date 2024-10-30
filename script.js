@@ -58,56 +58,63 @@ const skillAutoWriter = () => {
   }
 };
 
+const whoWeAreDropDownIcon = document.getElementById(
+  "who-we-are-dropdown-icon"
+);
 const aboutDropDown = () => {
   const aboutDropDown = document.getElementById("about-dropdown");
   let dropdown = document.createElement("div");
-    dropdown.innerHTML = `
+  dropdown.innerHTML = `
     <div class="dropdown-container">
     <div>We are innovative thinkers dedicated to bringing <a style="text-decoration:underline;" href="#skills">ideas</a> to life.</div>
     <div>We are a <a style="text-decoration:underline;" href="#contact">team</a> building responsive, efficient, and engaging web solutions</div>
     <div><a style="text-decoration:underline;" href="#projects">10 projects completed</a></div>
     </div>
 `;
-    aboutDropDown.appendChild(dropdown);
-    aboutDropDown.classList.add('dropdown');
+  aboutDropDown.appendChild(dropdown);
+  aboutDropDown.classList.add("dropdown");
   aboutDropDown.addEventListener("mouseover", () => {
-    document.querySelector('.dropdown-container').style.display = 'block'
+    document.querySelector(".dropdown-container").style.display = "block";
+    whoWeAreDropDownIcon.style.transform = 'rotate(0deg)';
+    whoWeAreDropDownIcon.style.transition = '0.3s'
   });
   aboutDropDown.addEventListener("mouseout", () => {
-    document.querySelector('.dropdown-container').style.display = 'none'
+    document.querySelector(".dropdown-container").style.display = "none";
+    whoWeAreDropDownIcon.style.transform = "rotate(-90deg)";
   });
 };
 
-const menuOpenHandler = () =>{
-    const navbarMenu = document.getElementById('menu');
-    const sidebar = document.getElementById('sidebar');
-    const logo =  document.getElementById('logo');
-    if(window.innerWidth < 768){
-        navbarMenu.style.display = 'block';
-        logo.style.display = 'none';
-    }else{
-        navbarMenu.style.display = 'none';
-        logo.style.display = 'block';
-    }
+const menuOpenHandler = () => {
+  const navbarMenu = document.getElementById("menu");
+  const sidebar = document.getElementById("sidebar");
+  const logo = document.getElementById("logo");
+  if (window.innerWidth < 768) {
+    navbarMenu.style.display = "block";
+    logo.style.display = "none";
+  } else {
+    navbarMenu.style.display = "none";
+    logo.style.display = "block";
+  }
 
-// Toggle sidebar visibility
-navbarMenu.addEventListener('click', () => {
-    sidebar.classList.toggle('open'); // Toggle the 'open' class
-});
+  // Toggle sidebar visibility
+  navbarMenu.addEventListener("click", () => {
+    sidebar.classList.toggle("open"); // Toggle the 'open' class
+  });
 
-// Close the sidebar when a link is clicked
-navLinks.forEach((navLink) => {
+  // Close the sidebar when a link is clicked
+  navLinks.forEach((navLink) => {
     navLink.addEventListener("click", () => {
-        sidebar.classList.remove('open'); // Close sidebar on link click
+      sidebar.classList.remove("open"); // Close sidebar on link click
     });
-});
-}
+  });
+};
 
 window.addEventListener("DOMContentLoaded", () => {
   Array.from(navLinks)[0].classList.add("active");
+  whoWeAreDropDownIcon.style.transform = "rotate(-90deg)";
   scrollToTop();
   navLinksScrollHandler();
-  skillAutoWriter();
+  skillAutoWriter(); 
   aboutDropDown();
-  menuOpenHandler()
+  menuOpenHandler();
 });

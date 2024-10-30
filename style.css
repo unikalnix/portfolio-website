@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -114,6 +115,14 @@ a {
   transform: scale(0.98);
 }
 
+hr {
+  background-color: lightseagreen;
+  border: none;
+  margin: auto;
+  height: 2px;
+  margin: 30px;
+}
+
 /* From Uiverse.io by mobinkakei */
 .loader {
   width: 150px;
@@ -162,6 +171,10 @@ a {
   padding: 0 20px;
   z-index: 9999;
   color: white;
+}
+
+#menu {
+  cursor: pointer;
 }
 
 .navbar .nav-btn {
@@ -219,6 +232,7 @@ a {
   top: var(--rightTop);
   width: var(--rightWidth);
   background-color: var(--background-color);
+  overflow: hidden;
 }
 
 .home {
@@ -242,6 +256,10 @@ a {
 
 .home .home-left h2 {
   font-size: 36px;
+}
+
+.home-autotype-effect {
+  text-align: center;
 }
 
 .home .home-left h3:nth-child(2) {
@@ -292,7 +310,8 @@ a {
 }
 
 .about h1 {
-  align-self: flex-start; /* Changed place-self to align-self for proper alignment */
+  align-self: flex-start;
+  /* Changed place-self to align-self for proper alignment */
   width: 100%;
   position: relative;
   z-index: 1;
@@ -306,7 +325,8 @@ a {
   left: 50%;
   transform: translateX(-50%) translateY(-15px);
   background-color: #1b4951;
-  box-shadow: 0 0 0 rgba(45, 255, 196, 0); /* Start without shadow */
+  box-shadow: 0 0 0 rgba(45, 255, 196, 0);
+  /* Start without shadow */
   width: 100%;
   height: 100%;
   border-radius: 15px;
@@ -334,13 +354,15 @@ a {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
 
 .about h1:hover::after {
-  box-shadow: 0px 0px 105px 45px rgba(45, 255, 196, 0.9); /* Activates the shadow */
+  box-shadow: 0px 0px 105px 45px rgba(45, 255, 196, 0.9);
+  /* Activates the shadow */
 }
 
 .dropdown-container {
@@ -381,6 +403,7 @@ a {
   from {
     clip-path: inset(0 0 100% 0);
   }
+
   to {
     clip-path: inset(0 0 0 0);
   }
@@ -394,12 +417,14 @@ a {
   place-self: flex-end;
   width: 100%;
 }
+
 @keyframes move {
   100% {
     transform: translate3d(0, 0, 1px) rotate(360deg);
   }
 }
-.background span {
+
+.background > span {
   width: 3vmin;
   height: 3vmin;
   border-radius: 3vmin;
@@ -411,7 +436,7 @@ a {
   animation-iteration-count: infinite;
 }
 
-.background span:nth-child(0) {
+.background > span:nth-child(0) {
   color: #ffacac;
   top: 32%;
   left: 2%;
@@ -420,7 +445,8 @@ a {
   transform-origin: 21vw 2vh;
   box-shadow: 6vmin 0 0.983904044512705vmin currentColor;
 }
-.background span:nth-child(1) {
+
+.background > span:nth-child(1) {
   color: #e45a84;
   top: 45%;
   left: 68%;
@@ -429,7 +455,8 @@ a {
   transform-origin: -2vw -16vh;
   box-shadow: 6vmin 0 1.2191983644513034vmin currentColor;
 }
-.background span:nth-child(2) {
+
+.background > span:nth-child(2) {
   color: #ffacac;
   top: 30%;
   left: 22%;
@@ -438,7 +465,8 @@ a {
   transform-origin: 11vw 22vh;
   box-shadow: 6vmin 0 1.4285088722333472vmin currentColor;
 }
-.background span:nth-child(3) {
+
+.background > span:nth-child(3) {
   color: #583c87;
   top: 82%;
   left: 10%;
@@ -447,7 +475,8 @@ a {
   transform-origin: -1vw -20vh;
   box-shadow: 6vmin 0 0.8586435885226738vmin currentColor;
 }
-.background span:nth-child(4) {
+
+.background > span:nth-child(4) {
   color: #583c87;
   top: 32%;
   left: 65%;
@@ -456,7 +485,8 @@ a {
   transform-origin: -12vw -12vh;
   box-shadow: 6vmin 0 1.4696404661573472vmin currentColor;
 }
-.background span:nth-child(5) {
+
+.background > span:nth-child(5) {
   color: #e45a84;
   top: 5%;
   left: 54%;
@@ -465,7 +495,8 @@ a {
   transform-origin: -7vw -2vh;
   box-shadow: -6vmin 0 1.7410534468029262vmin currentColor;
 }
-.background span:nth-child(6) {
+
+.background > span:nth-child(6) {
   color: #583c87;
   top: 10%;
   left: 20%;
@@ -474,6 +505,7 @@ a {
   transform-origin: 17vw 8vh;
   box-shadow: -6vmin 0 1.0738793773845925vmin currentColor;
 }
+
 .background span:nth-child(7) {
   color: #583c87;
   top: 24%;
@@ -483,7 +515,8 @@ a {
   transform-origin: -22vw 10vh;
   box-shadow: -6vmin 0 1.4797698261129941vmin currentColor;
 }
-.background span:nth-child(8) {
+
+.background > span:nth-child(8) {
   color: #ffacac;
   top: 33%;
   left: 49%;
@@ -492,7 +525,8 @@ a {
   transform-origin: 24vw 14vh;
   box-shadow: 6vmin 0 1.5278732732243916vmin currentColor;
 }
-.background span:nth-child(9) {
+
+.background > span:nth-child(9) {
   color: #ffacac;
   top: 47%;
   left: 3%;
@@ -501,7 +535,8 @@ a {
   transform-origin: -3vw 12vh;
   box-shadow: -6vmin 0 1.6379640342644217vmin currentColor;
 }
-.background span:nth-child(10) {
+
+.background > span:nth-child(10) {
   color: #e45a84;
   top: 10%;
   left: 14%;
@@ -511,49 +546,123 @@ a {
   box-shadow: 6vmin 0 1.1044391406215353vmin currentColor;
 }
 
+/* projects */
 .projects {
-  color: white;
-  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  height: 100%;
 }
+
+.projects-container {
+  display: flex;
+  position: relative; /* For positioning children */
+  gap: 20px;
+}
+
+.project {
+  width: 100px; /* Initial width */
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #20b2aa;
+  position: relative; /* Position relative to manage child elements */
+  overflow: hidden; /* Hide overflow for a clean transition */
+  cursor: pointer; /* Pointer cursor on hover */
+  color: white; /* Text color */
+  transition: width 0.5s ease; /* Smooth transition for width */
+}
+
+.project:hover {
+  width: 400px; /* Expanded width on hover */
+}
+
+.project::after {
+  content: ''; /* Default text */
+  position: absolute;
+  top: 0;
+  left: 100%; /* Position it to the right of the project */
+  width: 300px; /* Width of the text area */
+  height: 400px;
+  color: white; /* Text color */
+  display: flex; /* Center text */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  transition: transform 0.5s ease; /* Smooth transition for the background */
+}
+
+.project:hover::after {
+  content: ''; /* Change text on hover */
+  transform: translateX(-100%); /* Slide in from the right */
+  background-image: url('WhatsApp Image 2024-09-07 at 13.31.04_3991dbac.jpg'); /* Background image on hover */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+}
+
+/* Ensure transition occurs smoothly when mouse leaves */
+.project::after {
+  transform: translateX(0); /* Keep initial state */
+}
+
+.project h1{
+  transform: rotate(-90deg);
+  width: 100%;
+  font-size: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .skills {
   color: white;
   height: 100vh;
 }
+
 .blog {
   color: white;
   height: 100vh;
 }
+
 .contact {
   color: white;
   height: 100vh;
 }
+
 .social {
   color: white;
   height: 100vh;
 }
 
 @media (max-width: 768px) {
-    .sidebar {
-        position: fixed; /* Change to fixed to overlay on top */
-        transform: translateY(-100%); /* Initially hide the sidebar */
-        transition: transform 0.3s ease; /* Smooth transition */
-        width: 250px;
-        height: 100vh;
-        z-index: 1000; /* Ensure it overlays on top */
-      }
-      
-      .sidebar.open {
-        transform: translateY(0); /* Show the sidebar when open */
-      }
-    
-      .right {
-        left: 0;
-        width: 100%;
-      }
-    
-      .home {
-        padding: 0;
-      }
+  .sidebar {
+    position: fixed;
+    /* Change to fixed to overlay on top */
+    transform: translateY(-100%);
+    /* Initially hide the sidebar */
+    transition: transform 0.3s ease;
+    /* Smooth transition */
+    width: 250px;
+    height: 100vh;
+    z-index: 1000;
+    /* Ensure it overlays on top */
+  }
+
+  .sidebar.open {
+    transform: translateY(0);
+    /* Show the sidebar when open */
+  }
+
+  .right {
+    left: 0;
+    width: 100%;
+  }
+
+  .home {
+    padding: 0;
+  }
 
   .home .home-left {
     display: flex;
@@ -565,18 +674,13 @@ a {
   .loader {
     display: none;
   }
+
   .home section {
     flex-direction: column;
     padding: 0;
     overflow: hidden;
     width: 100%;
     min-height: 100vh;
-  }
-
-  .about {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
   }
 
   .home .home-right .image-container img {
@@ -592,7 +696,12 @@ a {
   }
 
   .home .home-left h2 {
-    font-size: 28px;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .home .home-left h3:nth-child(3) {
+    font-size: 24px;
   }
 
   .about {
@@ -601,9 +710,18 @@ a {
     align-items: start;
     gap: 50px;
     justify-content: center;
+    position: relative;
+    min-height: auto;
+    
   }
 
   .dropdown-container {
     left: 0;
+  }
+
+  .btn,
+  .navbar .nav-btn {
+    padding: 0.8em 0.75em;
+    font-size: 14px;
   }
 }
