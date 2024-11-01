@@ -256,6 +256,7 @@ hr {
 }
 
 .home .home-left h2 {
+  text-align: start;
   font-size: 36px;
 }
 
@@ -596,9 +597,54 @@ hr {
 }
 
 /* Large screen */
-.project:hover{
+.project-one:hover{
   min-width: 40%;
-  background: url('WhatsApp Image 2024-09-07 at 13.31.04_3991dbac.jpg');
+  background: url('Ecommerce.png');
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: top;
+  background-size: 400px;
+  background-color: transparent;
+}
+.project-two:hover{
+  min-width: 40%;
+  background: url('Todo.png');
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: top;
+  background-size: 400px;
+  background-color: transparent;
+}
+.project-three:hover{
+  min-width: 40%;
+  background: url('Clock.png');
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: top;
+  background-size: 400px;
+  background-color: transparent;
+}
+.project-four:hover{
+  min-width: 40%;
+  background: url('Portfolio.png');
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: top;
+  background-size: 400px;
+  background-color: transparent;
+}
+.project-five:hover{
+  min-width: 40%;
+  background: url('SAAS.png');
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: top;
+  background-size: 400px;
+  background-color: transparent;
+}
+.project-Six:hover{
+  min-width: 40%;
+  background: url('University.png');
   background-repeat: no-repeat;
   background-position-x: left;
   background-position-y: top;
@@ -610,25 +656,160 @@ hr {
   display: none;
 }
 
-.skills {
+.skills, .blog, .contact, .social {
   color: white;
-  height: 100vh;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.blog {
-  color: white;
-  height: 100vh;
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #20b2aa;
 }
 
-.contact {
-  color: white;
-  height: 100vh;
+/* Skills Section */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
-.social {
-  color: white;
-  height: 100vh;
+.skill-item {
+  background-color: #1b4951;
+  padding: 1rem;
+  border-radius: 8px;
 }
+
+.skill-name {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+  height: 10px;
+  background-color: #0b1e21;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background-color: #20b2aa;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Blog Section */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.blog-post {
+  background-color: #1b4951;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.blog-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #20b2aa;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #a0aec0;
+  margin-bottom: 1rem;
+}
+
+.blog-excerpt {
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #20b2aa;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #1a9690;
+}
+
+/* Contact Section */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #1b4951;
+  color: white;
+}
+
+#contact-form textarea {
+  height: 150px;
+}
+
+#contact-form button {
+  padding: 0.5rem;
+  background-color: #20b2aa;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+  background-color: #1a9690;
+}
+
+/* Social Section */
+.social-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1b4951;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.social-item:hover {
+  background-color: #2e788646;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
 
 @media (max-width: 768px) {
   .sidebar {
@@ -731,6 +912,24 @@ hr {
   .project:hover{
     background-size: 250px;
     min-width: 60%;
+  }
+  .skills-container,
+  .blog-container {
+    grid-template-columns: 1fr;
+  }
+
+  .social-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-item {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #contact-form{
+    width: 300px;
   }
 
 }

@@ -144,3 +144,113 @@ document.querySelectorAll(".project").forEach((item) => {
 });
 
 }
+
+// Skills data
+const skillsSection = [
+  { name: 'HTML', level: 90 },
+  { name: 'CSS', level: 85 },
+  { name: 'JavaScript', level: 80 },
+  { name: 'React', level: 75 },
+  { name: 'Node.js', level: 70 },
+];
+
+// Blog posts data
+const blogPosts = [
+  { 
+    title: 'Getting Started with React', 
+    date: '2023-01-15', 
+    excerpt: 'Learn the basics of React and start building your first app.' 
+  },
+  { 
+    title: 'CSS Grid vs Flexbox', 
+    date: '2023-02-22', 
+    excerpt: 'Understand the differences and when to use each layout system.' 
+  },
+  { 
+    title: 'JavaScript ES6 Features', 
+    date: '2023-03-10', 
+    excerpt: 'Explore the powerful features introduced in ES6.' 
+  },
+];
+
+// Social profiles data
+const socialProfiles = [
+  { name: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/yourusername' },
+  { name: 'LinkedIn', icon: 'fab fa-linkedin', url: 'https://linkedin.com/in/yourusername' },
+  { name: 'Twitter', icon: 'fab fa-twitter', url: 'https://twitter.com/yourusername' },
+];
+
+// Function to populate skills
+function populateSkills() {
+  const skillsContainer = document.querySelector('.skills-container');
+  skillsSection.forEach(skill => {
+    const skillItem = document.createElement('div');
+    skillItem.classList.add('skill-item');
+    skillItem.innerHTML = `
+      <div class="skill-name">${skill.name}</div>
+      <div class="skill-bar">
+        <div class="skill-progress" style="width: ${skill.level}%"></div>
+      </div>
+    `;
+    skillsContainer.appendChild(skillItem);
+  });
+}
+
+// Function to populate blog posts
+function populateBlogPosts() {
+  const blogContainer = document.querySelector('.blog-container');
+  blogPosts.forEach(post => {
+    const blogPost = document.createElement('div');
+    blogPost.classList.add('blog-post');
+    blogPost.innerHTML = `
+      <h3 class="blog-title">${post.title}</h3>
+      <div class="blog-date">${post.date}</div>
+      <p class="blog-excerpt">${post.excerpt}</p>
+      <a href="#" class="read-more">Read More</a>
+    `;
+    blogContainer.appendChild(blogPost);
+  });
+}
+
+// Function to populate social profiles
+function populateSocialProfiles() {
+  const socialContainer = document.querySelector('.social-container');
+  socialProfiles.forEach(profile => {
+    const socialItem = document.createElement('a');
+    socialItem.classList.add('social-item');
+    socialItem.href = profile.url;
+    socialItem.target = '_blank';
+    socialItem.innerHTML = `
+      <i class="${profile.icon} social-icon"></i>
+      <span>${profile.name}</span>
+    `;
+    socialContainer.appendChild(socialItem);
+  });
+}
+
+// Function to handle form submission
+function handleFormSubmission(event) {
+  event.preventDefault();
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  
+  // Here you would typically send this data to a server
+  console.log('Form submitted:', { name, email, message });
+  
+  // Clear the form
+  event.target.reset();
+  
+  // Show a success message (you can replace this with a more sophisticated notification)
+  alert('Message sent successfully!');
+}
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', () => {
+  populateSkills();
+  populateBlogPosts();
+  populateSocialProfiles();
+  
+  const contactForm = document.getElementById('contact-form');
+  contactForm.addEventListener('submit', handleFormSubmission);
+});
